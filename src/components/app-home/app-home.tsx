@@ -5,7 +5,7 @@ import { push } from '../../shared/router';
 @Component({
   tag: 'app-home',
   styleUrl: 'app-home.css',
-  shadow: true,
+  shadow: false,
 })
 export class AppHome {
   onClick = () => push('/profile/Clicked!');
@@ -24,10 +24,10 @@ export class AppHome {
         <button onClick={this.onClick}>Click me!</button>
 
         <a {...href('/focus1')}>
-          <button>Focus1 page</button>
+          <button>Focus1</button>
         </a>
         <a {...href('/focus2')}>
-          <button>Focus2 page</button>
+          <button>Focus2</button>
         </a>
       </div>
     );

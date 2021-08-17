@@ -5,7 +5,7 @@ import { Router } from '../../shared/router';
 @Component({
   tag: 'app-root',
   styleUrl: 'app-root.css',
-  shadow: true,
+  shadow: false,
 })
 export class AppRoot {
   render() {

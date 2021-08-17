@@ -1,9 +1,9 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'app-focus2',
   styleUrl: 'app-focus2.css',
-  shadow: true,
+  shadow: false,
 })
 export class AppFocus2 {
 

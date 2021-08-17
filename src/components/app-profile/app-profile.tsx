@@ -3,7 +3,7 @@ import { Component, Prop, h } from '@stencil/core';
 @Component({
   tag: 'app-profile',
   styleUrl: 'app-profile.css',
-  shadow: true,
+  shadow: false,
 })
 export class AppProfile {
   @Prop() name: string;
