@@ -6,37 +6,47 @@ import { Component, h } from '@stencil/core';
   shadow: false,
 })
 export class AppFocus1 {
-  inputs: HTMLInputElement[] = [];
 
   componentDidRender() {
-    this.inputs = [];
+    const inputs = [];
     const div = document.querySelector('.app-focus1');
     const button = div.querySelector('button');
-    div.querySelectorAll('input').forEach(elm => this.inputs.push(elm));
+    div.querySelectorAll('input').forEach(el => inputs.push(el));
 
-    this.inputs.forEach((_, i) => this.addEvent(i, button));
-  }
-
-  addEvent = (i: number, button: HTMLButtonElement) => {
-    const next = this.inputs[i + 1];
-    this.inputs[i].addEventListener('keyup', (ev) => this.focus(ev, next ? next : button));
+    inputs.forEach((el, i) => {
+      const next = inputs[i + 1];
+      el.addEventListener('keyup', (ev) => this.focus(ev, next ? next : button));
+    })
   }
 
   focus = (ev: KeyboardEvent, next: HTMLElement) => {
-    console.log(next);
     if (ev.key === 'Enter')
       next.focus();
   }
 
   render() {
     return (
-      <div class="app-focus1">
+      <div class="app-focus1" >
         <p>FOCUS1</p>
-        <input type="text" />
-        <input type="text" />
-        <input type="text" />
-        <input type="text" />
-        <button>OK</button>
+        <div>
+          <input type="text" />
+        </div>
+
+        <div>
+          <input type="text" />
+        </div>
+
+        <div>
+          <input type="text" />
+        </div>
+
+        <div>
+          <input type="text" />
+        </div>
+
+        <div>
+          <button>OK</button>
+        </div>
       </div>
     );
   }
