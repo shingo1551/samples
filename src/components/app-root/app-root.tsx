@@ -21,6 +21,12 @@ export class AppRoot {
               <app-home />
             </Route>
             <Route path={match('/profile/:name')} render={({ name }) => <app-profile name={name} />} />
+            <Route path="/focus1">
+              <app-focus1 />
+            </Route>
+            <Route path="/focus2">
+              <app-focus2 />
+            </Route>
           </Router.Switch>
         </main>
       </div>

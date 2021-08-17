@@ -22,6 +22,13 @@ export class AppHome {
           <button>Profile page</button>
         </a>
         <button onClick={this.onClick}>Click me!</button>
+
+        <a {...href('/focus1')}>
+          <button>Focus1 page</button>
+        </a>
+        <a {...href('/focus2')}>
+          <button>Focus2 page</button>
+        </a>
       </div>
     );
   }
