@@ -10,7 +10,13 @@ export namespace Components {
     }
     interface AppFocus2 {
     }
+    interface AppFocus3 {
+    }
     interface AppHome {
+    }
+    interface AppInput {
+        "disabled": boolean;
+        "tabIndex": number;
     }
     interface AppProfile {
         "name": string;
@@ -31,11 +37,23 @@ declare global {
         prototype: HTMLAppFocus2Element;
         new (): HTMLAppFocus2Element;
     };
+    interface HTMLAppFocus3Element extends Components.AppFocus3, HTMLStencilElement {
+    }
+    var HTMLAppFocus3Element: {
+        prototype: HTMLAppFocus3Element;
+        new (): HTMLAppFocus3Element;
+    };
     interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {
     }
     var HTMLAppHomeElement: {
         prototype: HTMLAppHomeElement;
         new (): HTMLAppHomeElement;
+    };
+    interface HTMLAppInputElement extends Components.AppInput, HTMLStencilElement {
+    }
+    var HTMLAppInputElement: {
+        prototype: HTMLAppInputElement;
+        new (): HTMLAppInputElement;
     };
     interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement {
     }
@@ -52,7 +70,9 @@ declare global {
     interface HTMLElementTagNameMap {
         "app-focus1": HTMLAppFocus1Element;
         "app-focus2": HTMLAppFocus2Element;
+        "app-focus3": HTMLAppFocus3Element;
         "app-home": HTMLAppHomeElement;
+        "app-input": HTMLAppInputElement;
         "app-profile": HTMLAppProfileElement;
         "app-root": HTMLAppRootElement;
     }
@@ -62,7 +82,13 @@ declare namespace LocalJSX {
     }
     interface AppFocus2 {
     }
+    interface AppFocus3 {
+    }
     interface AppHome {
+    }
+    interface AppInput {
+        "disabled"?: boolean;
+        "tabIndex"?: number;
     }
     interface AppProfile {
         "name"?: string;
@@ -72,7 +98,9 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "app-focus1": AppFocus1;
         "app-focus2": AppFocus2;
+        "app-focus3": AppFocus3;
         "app-home": AppHome;
+        "app-input": AppInput;
         "app-profile": AppProfile;
         "app-root": AppRoot;
     }
@@ -83,7 +111,9 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "app-focus1": LocalJSX.AppFocus1 & JSXBase.HTMLAttributes<HTMLAppFocus1Element>;
             "app-focus2": LocalJSX.AppFocus2 & JSXBase.HTMLAttributes<HTMLAppFocus2Element>;
+            "app-focus3": LocalJSX.AppFocus3 & JSXBase.HTMLAttributes<HTMLAppFocus3Element>;
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
+            "app-input": LocalJSX.AppInput & JSXBase.HTMLAttributes<HTMLAppInputElement>;
             "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
         }

@@ -27,6 +27,9 @@ export class AppRoot {
             <Route path="/focus2">
               <app-focus2 />
             </Route>
+            <Route path="/focus3">
+              <app-focus3 />
+            </Route>
           </Router.Switch>
         </main>
       </div>
