@@ -32,6 +32,9 @@ export class AppHome {
         <a {...href('/focus3')}>
           <button>Focus3</button>
         </a>
+        <a {...href('/focus4')}>
+          <button>Focus4</button>
+        </a>
       </div>
     );
   }

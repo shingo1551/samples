@@ -2,7 +2,6 @@ import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'app-focus2',
-  styleUrl: 'app-focus2.css',
   shadow: false,
 })
 export class AppFocus2 {
@@ -11,7 +10,7 @@ export class AppFocus2 {
 
   componentDidRender() {
     this.inputs = [];
-    const div = document.querySelector('.app-focus2');
+    const div = document.querySelector('.app-focus');
     this.button = div.querySelector('button');
 
     div.querySelectorAll('input').forEach(el => this.inputs.push(el));
@@ -35,7 +34,7 @@ export class AppFocus2 {
 
   render() {
     return (
-      <div class="app-focus2">
+      <div class="app-focus">
         <p>FOCUS2</p>
         <div>
           <input type="text" tabindex="4" />
