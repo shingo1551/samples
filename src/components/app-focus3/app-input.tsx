@@ -1,5 +1,5 @@
 import { Component, h, Prop } from '@stencil/core';
-import { form } from './focus';
+import { Form } from './focus';
 
 @Component({
   tag: 'app-input',
@@ -8,15 +8,16 @@ import { form } from './focus';
 export class AppInput {
   @Prop() tabIndex: number;
   @Prop() disabled: boolean;
+  @Prop() form: Form;
 
   focus = (ev: KeyboardEvent) => {
     if (ev.key === 'Enter') {
       const index = (ev.target as HTMLElement).tabIndex;
-      const next = form.inputs.find(el => index < el.tabIndex && !el.disabled);
+      const next = this.form.inputs.find(el => index < el.tabIndex && !el.disabled);
       if (next)
         next.focus();
       else
-        form.button.focus();
+        this.form.button.focus();
     }
   }
 

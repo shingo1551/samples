@@ -5,6 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { Form } from "./components/app-focus3/focus";
 export namespace Components {
     interface AppFocus1 {
     }
@@ -16,6 +17,7 @@ export namespace Components {
     }
     interface AppInput {
         "disabled": boolean;
+        "form": Form;
         "tabIndex": number;
     }
     interface AppProfile {
@@ -88,6 +90,7 @@ declare namespace LocalJSX {
     }
     interface AppInput {
         "disabled"?: boolean;
+        "form"?: Form;
         "tabIndex"?: number;
     }
     interface AppProfile {

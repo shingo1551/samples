@@ -1,4 +1,4 @@
-export const form = {
-    inputs: [] as HTMLInputElement[],
-    button: null as HTMLButtonElement,
+export interface Form {
+    inputs: HTMLInputElement[];
+    button: HTMLButtonElement;
 }
