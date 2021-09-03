@@ -1,3 +1,50 @@
 .app-table {
   padding: 10px;
 }
+
+.table {
+  display: table;
+  width: 100%;
+}
+
+.row {
+  display: table-row;
+}
+
+
+.col1 {
+  display: table-cell;
+  width: 20%;
+}
+
+.col2 {
+  display: table-cell;
+  width: 30%;
+}
+
+.col3 {
+  display: table;
+  width: 50%;
+  vertical-align: top;
+  text-align: center;
+}
+
+.left {
+  display: table-cell;
+}
+
+.center {
+  display: table-cell;
+}
+
+.right {
+  display: table-cell;
+}
+
+.border {
+  border: 2px solid #3f66a6;
+  box-sizing: border-box;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+}
