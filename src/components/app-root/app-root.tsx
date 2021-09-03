@@ -33,6 +33,9 @@ export class AppRoot {
             <Route path="/focus4">
               <app-focus4 />
             </Route>
+            <Route path="/table">
+              <app-table />
+            </Route>
           </Router.Switch>
         </main>
       </div>

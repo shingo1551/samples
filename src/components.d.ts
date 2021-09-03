@@ -34,6 +34,8 @@ export namespace Components {
     }
     interface AppRoot {
     }
+    interface AppTable {
+    }
 }
 declare global {
     interface HTMLAppFocus1Element extends Components.AppFocus1, HTMLStencilElement {
@@ -90,6 +92,12 @@ declare global {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
     };
+    interface HTMLAppTableElement extends Components.AppTable, HTMLStencilElement {
+    }
+    var HTMLAppTableElement: {
+        prototype: HTMLAppTableElement;
+        new (): HTMLAppTableElement;
+    };
     interface HTMLElementTagNameMap {
         "app-focus1": HTMLAppFocus1Element;
         "app-focus2": HTMLAppFocus2Element;
@@ -100,6 +108,7 @@ declare global {
         "app-input4": HTMLAppInput4Element;
         "app-profile": HTMLAppProfileElement;
         "app-root": HTMLAppRootElement;
+        "app-table": HTMLAppTableElement;
     }
 }
 declare namespace LocalJSX {
@@ -128,6 +137,8 @@ declare namespace LocalJSX {
     }
     interface AppRoot {
     }
+    interface AppTable {
+    }
     interface IntrinsicElements {
         "app-focus1": AppFocus1;
         "app-focus2": AppFocus2;
@@ -138,6 +149,7 @@ declare namespace LocalJSX {
         "app-input4": AppInput4;
         "app-profile": AppProfile;
         "app-root": AppRoot;
+        "app-table": AppTable;
     }
 }
 export { LocalJSX as JSX };
@@ -153,6 +165,7 @@ declare module "@stencil/core" {
             "app-input4": LocalJSX.AppInput4 & JSXBase.HTMLAttributes<HTMLAppInput4Element>;
             "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "app-table": LocalJSX.AppTable & JSXBase.HTMLAttributes<HTMLAppTableElement>;
         }
     }
 }
