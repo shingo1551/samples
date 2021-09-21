@@ -3,6 +3,7 @@ import { postcss } from '@stencil/postcss';
 import autoprefixer from 'autoprefixer';
 import postcssimport from 'postcss-import';
 import tailwindcss from 'tailwindcss';
+import purgecss from '@fullhuman/postcss-purgecss';
 
 // https://stenciljs.com/docs/config
 
@@ -20,7 +21,12 @@ export const config: Config = {
   ],
   plugins: [
     postcss({
-      plugins: [autoprefixer(), postcssimport(), tailwindcss()]
+      plugins: [
+        autoprefixer(),
+        postcssimport(),
+        tailwindcss(),
+        purgecss({ content: ['./src/**/*.html', './src/**/*.tsx'] })
+      ]
     })
   ]
 };
