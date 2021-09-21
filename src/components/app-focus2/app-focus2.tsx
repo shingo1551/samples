@@ -2,7 +2,7 @@ import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'app-focus2',
-  shadow: false,
+  shadow: true,
 })
 export class AppFocus2 {
   inputs = [] as HTMLInputElement[];

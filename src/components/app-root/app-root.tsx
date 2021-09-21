@@ -5,7 +5,7 @@ import { Router } from '../../shared/router';
 @Component({
   tag: 'app-root',
   styleUrl: 'app-root.pcss',
-  shadow: false,
+  shadow: true,
 })
 export class AppRoot {
   render() {

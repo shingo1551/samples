@@ -3,7 +3,7 @@ import { Component, h } from '@stencil/core';
 @Component({
   tag: 'app-table',
   styleUrl: 'app-table.css',
-  shadow: false,
+  shadow: true,
 })
 export class AppTable {
 

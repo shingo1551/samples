@@ -3,7 +3,7 @@ import { Form4 } from './form4';
 
 @Component({
   tag: 'app-input4',
-  shadow: false,
+  shadow: true,
 })
 export class AppInput4 {
   @Prop() tabIndex: number;

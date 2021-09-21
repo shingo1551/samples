@@ -3,7 +3,7 @@ import { Form4 } from './form4';
 
 @Component({
   tag: 'app-focus4',
-  shadow: false,
+  shadow: true,
 })
 export class AppFocus4 {
   @State() form = {} as Form4;

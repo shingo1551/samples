@@ -5,7 +5,7 @@ import { push } from '../../shared/router';
 @Component({
   tag: 'app-home',
   styleUrl: 'app-home.pcss',
-  shadow: false,
+  shadow: true,
 })
 export class AppHome {
   onClick = () => push('/profile/Clicked!');
