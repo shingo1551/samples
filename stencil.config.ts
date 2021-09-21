@@ -1,9 +1,11 @@
 import { Config } from '@stencil/core';
+import { postcss } from '@stencil/postcss';
+import autoprefixer from 'autoprefixer';
 
 // https://stenciljs.com/docs/config
 
 export const config: Config = {
-  globalStyle: 'src/global/app.css',
+  globalStyle: 'src/global/app.pcss',
   globalScript: 'src/global/app.ts',
   taskQueue: 'async',
   outputTargets: [
@@ -14,4 +16,9 @@ export const config: Config = {
       baseUrl: 'https://myapp.local/',
     },
   ],
+  plugins: [
+    postcss({
+      plugins: [autoprefixer()]
+    })
+  ]
 };

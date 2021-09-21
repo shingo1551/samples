@@ -37,19 +37,19 @@ export class AppFocus2 {
       <div class="app-focus">
         <p>FOCUS2</p>
         <div>
-          <input type="text" tabindex="4" />
+          <input type="text" tabIndex={4} />
         </div>
 
         <div>
-          <input type="text" tabindex="3" disabled />
+          <input type="text" tabIndex={3} disabled />
         </div>
 
         <div>
-          <input type="text" tabindex="2" />
+          <input type="text" tabIndex={2} />
         </div>
 
         <div>
-          <input type="text" tabindex="1" />
+          <input type="text" tabIndex={1} />
         </div>
 
         <div>

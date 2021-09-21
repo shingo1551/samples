@@ -12,8 +12,10 @@
   },
   "devDependencies": {
     "@stencil/core": "^2.0.0",
+    "@stencil/postcss": "^2.0.0",
+    "@stencil/router": "2.0.0-2",
     "@stencil/store": "^1.3.0",
-    "@stencil/router": "2.0.0-2"
+    "autoprefixer": "^10.3.4"
   },
   "license": "MIT"
 }

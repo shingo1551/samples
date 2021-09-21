@@ -4,7 +4,7 @@ import { push } from '../../shared/router';
 
 @Component({
   tag: 'app-home',
-  styleUrl: 'app-home.css',
+  styleUrl: 'app-home.pcss',
   shadow: false,
 })
 export class AppHome {

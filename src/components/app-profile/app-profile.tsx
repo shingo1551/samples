@@ -2,7 +2,7 @@ import { Component, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'app-profile',
-  styleUrl: 'app-profile.css',
+  styleUrl: 'app-profile.pcss',
   shadow: false,
 })
 export class AppProfile {
