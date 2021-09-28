@@ -2,6 +2,7 @@ import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'app-focus2',
+  styleUrl: 'app-focus2.pcss',
   shadow: true,
 })
 export class AppFocus2 {

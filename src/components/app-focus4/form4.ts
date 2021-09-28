@@ -1,4 +1,4 @@
 export interface Form4 {
-    inputs: HTMLAppInput4Element[];
-    button: HTMLButtonElement;
+  inputs: HTMLAppInput4Element[];
+  button: HTMLButtonElement;
 }

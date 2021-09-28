@@ -3,6 +3,7 @@ import { Form4 } from './form4';
 
 @Component({
   tag: 'app-focus4',
+  styleUrl: 'app-focus4.pcss',
   shadow: true,
 })
 export class AppFocus4 {

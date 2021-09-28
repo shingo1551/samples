@@ -1,4 +1,4 @@
 export interface Form3 {
-    inputs: HTMLInputElement[];
-    button: HTMLButtonElement;
+  inputs: HTMLInputElement[];
+  button: HTMLButtonElement;
 }

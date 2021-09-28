@@ -3,6 +3,7 @@ import { Form3 } from './form3';
 
 @Component({
   tag: 'app-input3',
+  styleUrl: 'app-input3.pcss',
   shadow: true,
 })
 export class AppInput3 {

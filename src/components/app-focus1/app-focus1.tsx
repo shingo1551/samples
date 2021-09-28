@@ -2,10 +2,10 @@ import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'app-focus1',
+  styleUrl: 'app-focus1.pcss',
   shadow: true,
 })
 export class AppFocus1 {
-
   componentDidRender() {
     const inputs = [];
     const div = document.querySelector('.app-focus');
