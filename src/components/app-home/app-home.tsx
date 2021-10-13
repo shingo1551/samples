@@ -38,6 +38,9 @@ export class AppHome {
         <a {...href('/table')}>
           <button>Table</button>
         </a>
+
+        <input type='radio' />radio
+        <input type='checkbox' />check
       </div>
     );
   }
