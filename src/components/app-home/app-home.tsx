@@ -39,8 +39,12 @@ export class AppHome {
           <button>Table</button>
         </a>
 
-        <input type='radio' />radio
-        <input type='checkbox' />check
+        <br />
+        <div class="panel">
+          <div><input type='radio' />radio</div>
+          <div><input type='checkbox' />check</div>
+          <div><input type='search' /></div>
+        </div>
       </div>
     );
   }
