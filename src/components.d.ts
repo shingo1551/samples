@@ -8,6 +8,8 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { Form3 } from "./components/app-focus3/form3";
 import { Form4 } from "./components/app-focus4/form4";
 export namespace Components {
+    interface AppEvent {
+    }
     interface AppFocus1 {
     }
     interface AppFocus2 {
@@ -38,6 +40,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLAppEventElement extends Components.AppEvent, HTMLStencilElement {
+    }
+    var HTMLAppEventElement: {
+        prototype: HTMLAppEventElement;
+        new (): HTMLAppEventElement;
+    };
     interface HTMLAppFocus1Element extends Components.AppFocus1, HTMLStencilElement {
     }
     var HTMLAppFocus1Element: {
@@ -99,6 +107,7 @@ declare global {
         new (): HTMLAppTableElement;
     };
     interface HTMLElementTagNameMap {
+        "app-event": HTMLAppEventElement;
         "app-focus1": HTMLAppFocus1Element;
         "app-focus2": HTMLAppFocus2Element;
         "app-focus3": HTMLAppFocus3Element;
@@ -112,6 +121,8 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface AppEvent {
+    }
     interface AppFocus1 {
     }
     interface AppFocus2 {
@@ -140,6 +151,7 @@ declare namespace LocalJSX {
     interface AppTable {
     }
     interface IntrinsicElements {
+        "app-event": AppEvent;
         "app-focus1": AppFocus1;
         "app-focus2": AppFocus2;
         "app-focus3": AppFocus3;
@@ -156,6 +168,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "app-event": LocalJSX.AppEvent & JSXBase.HTMLAttributes<HTMLAppEventElement>;
             "app-focus1": LocalJSX.AppFocus1 & JSXBase.HTMLAttributes<HTMLAppFocus1Element>;
             "app-focus2": LocalJSX.AppFocus2 & JSXBase.HTMLAttributes<HTMLAppFocus2Element>;
             "app-focus3": LocalJSX.AppFocus3 & JSXBase.HTMLAttributes<HTMLAppFocus3Element>;

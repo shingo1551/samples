@@ -38,6 +38,9 @@ export class AppHome {
         <a {...href('/table')}>
           <button>Table</button>
         </a>
+        <a {...href('/event')}>
+          <button>Event</button>
+        </a>
 
         <br />
         <div class="panel">

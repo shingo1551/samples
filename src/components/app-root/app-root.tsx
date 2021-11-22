@@ -36,6 +36,9 @@ export class AppRoot {
             <Route path="/table">
               <app-table />
             </Route>
+            <Route path="/event">
+              <app-event />
+            </Route>
           </Router.Switch>
         </main>
       </div>
