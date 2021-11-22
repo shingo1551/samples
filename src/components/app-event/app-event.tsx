@@ -22,7 +22,7 @@ export class AppEvent {
         cancelable: true
       });
       this.button.dispatchEvent(event);
-    }, 1000 * 60 * 6);
+    }, 1000 * 60 * 5);
   }
 
   async disconnectedCallback() {
