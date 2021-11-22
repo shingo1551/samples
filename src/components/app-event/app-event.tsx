@@ -7,6 +7,7 @@ import { Component, Host, h, State } from '@stencil/core';
 })
 export class AppEvent {
   @State() count = 0;
+  @State() date = new Date()
 
   button: HTMLButtonElement;
   timer: number;
@@ -32,6 +33,7 @@ export class AppEvent {
   handleClick = (e: MouseEvent) => {
     console.log(e);
     this.count++;
+    this.date = new Date();
   }
 
   render() {
@@ -39,6 +41,7 @@ export class AppEvent {
       <Host>
         <button ref={el => this.button = el} onClick={this.handleClick} >Event</button>
         <p>{this.count}</p>
+        <p>{this.date.toLocaleString()}</p>
       </Host>
     );
   }
