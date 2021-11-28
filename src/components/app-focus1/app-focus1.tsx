@@ -1,4 +1,5 @@
 import { Component, h } from '@stencil/core';
+import state, { setLoading } from '../../shared/router'
 
 @Component({
   tag: 'app-focus1',
@@ -8,7 +9,14 @@ import { Component, h } from '@stencil/core';
 export class AppFocus1 {
   div: HTMLDivElement;
 
+  connectedCallback() {
+    setLoading(true)
+  }
+
   componentDidRender() {
+    if (!this.div)
+      return;
+
     const inputs = [];
     const button = this.div.querySelector('button');
     this.div.querySelectorAll('input').forEach(el => inputs.push(el));
@@ -25,6 +33,9 @@ export class AppFocus1 {
   }
 
   render() {
+    if (state.loading)
+      return null;
+
     return (
       <div class="app-focus" ref={el => this.div = el} >
         <p>FOCUS1</p>
