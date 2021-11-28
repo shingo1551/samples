@@ -8,20 +8,20 @@ import { Form4 } from './form4';
 })
 export class AppFocus4 {
   @State() form = {} as Form4;
+  div: HTMLDivElement;
 
   componentDidRender() {
     const form = this.form;
     form.inputs = [];
-    const div = document.querySelector('.app-focus');
-    form.button = div.querySelector('button');
+    form.button = this.div.querySelector('button');
 
-    div.querySelectorAll('app-input4').forEach(el => form.inputs.push(el));
+    this.div.querySelectorAll('app-input4').forEach(el => form.inputs.push(el));
     form.inputs.sort((i1, i2) => i1.tabIndex - i2.tabIndex);
   }
 
   render() {
     return (
-      <div class="app-focus">
+      <div class="app-focus" ref={el => this.div = el} >
         <p>FOCUS4</p>
         <app-input4 form={this.form} tabIndex={4} />
         <app-input4 form={this.form} tabIndex={3} disabled />

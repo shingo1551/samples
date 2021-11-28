@@ -6,11 +6,12 @@ import { Component, h } from '@stencil/core';
   shadow: true,
 })
 export class AppFocus1 {
+  div: HTMLDivElement;
+
   componentDidRender() {
     const inputs = [];
-    const div = document.querySelector('.app-focus');
-    const button = div.querySelector('button');
-    div.querySelectorAll('input').forEach(el => inputs.push(el));
+    const button = this.div.querySelector('button');
+    this.div.querySelectorAll('input').forEach(el => inputs.push(el));
 
     inputs.forEach((el, i) => {
       const next = inputs[i + 1];
@@ -25,7 +26,7 @@ export class AppFocus1 {
 
   render() {
     return (
-      <div class="app-focus" >
+      <div class="app-focus" ref={el => this.div = el} >
         <p>FOCUS1</p>
         <div>
           <input type="text" />
